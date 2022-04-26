@@ -1,10 +1,12 @@
-const path = require('path');
-const fs = require('fs');
-const solc = require('solc');
+const path = require('path'); // library that allows handle the right paths of our contracts.
+const fs = require('fs');  // Library filesystem that allows read files from our system.
+const solc = require('solc');  // Solidity compiler
 
-const inboxPath = path.resolve(__dirname, 'contracts', 'Inbox.sol');
-const source = fs.readFileSync(inboxPath, 'utf8');
+const inboxPath = path.resolve(__dirname, 'contracts', 'Inbox.sol');  // Path of our Inbox.sol contract
+const source = fs.readFileSync(inboxPath, 'utf8');  // Read the contract
 
+// To understand all the full info about how the input variable must be written check the solidity documentation in:
+// https://docs.soliditylang.org/en/latest/using-the-compiler.html
 let input = {
     language: 'Solidity',
     sources: {
