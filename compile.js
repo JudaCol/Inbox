@@ -23,7 +23,7 @@ let input = {
     }
 };
 
-// compiled contract
+// compiled contract variable
 let output = JSON.parse(solc.compile(JSON.stringify(input)));
 // contract info
 let outputContracts = output.contracts['Inbox.sol']['Inbox']
